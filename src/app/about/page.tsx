@@ -1,5 +1,5 @@
 import DogCeo from "./dogCeo";
-export default function About(props: { url: string }) {
+export default function About() {
   return (
     <div>
       <h2>Dog CEO: </h2>

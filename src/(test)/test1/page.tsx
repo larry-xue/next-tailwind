@@ -1,4 +1,4 @@
-export default async function Test() {
+export default async function Test1() {
   const message = await new Promise<string>((resolve) => {
     console.log("in executing sleep!");
     setTimeout(() => resolve("after 3000 ms!"), 3000);

@@ -1,4 +1,3 @@
-import { getURL } from "next/dist/shared/lib/utils";
 import Image from "next/image";
 
 // TODO: it doesn't work
@@ -13,7 +12,7 @@ import Image from "next/image";
 //   };
 // }
 
-export default async function DogCeo(props: { url: string }) {
+export default async function DogCeo() {
   const res = await fetch("http://localhost:3001/api/hello");
   const data: {
     code: number;
@@ -29,14 +28,12 @@ export default async function DogCeo(props: { url: string }) {
     <>
       <Image
         src={
-          props.url ||
           "https://i2.hdslb.com/bfs/archive/14064122b368741e3f1445b49ede184534881568.jpg@672w_378h_1c_!web-search-common-cover.avif"
         }
         alt="tet"
         width={300}
         height={300}
       />
-      current url is: {props.url}
       <div>message is: {data.result.length && data.result[0].content}</div>
     </>
   );
